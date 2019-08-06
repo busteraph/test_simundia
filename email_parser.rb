@@ -12,7 +12,9 @@ CSV.foreach(input_csv) do |row1|
 	
 	valid_email.each do |ve| 
 		full_name = ve.split('@')[0]
-	 	puts full_name
+		first_name = full_name.split('.')[0]
+		last_name = full_name.split('.')[1]
+	 	puts " #{first_name} #{last_name} "
 	end 	
 end
 
