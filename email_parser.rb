@@ -2,6 +2,13 @@ require 'csv'
 # program: email_parser.rb
 # usage:   ruby email_parser.rb input_filename > output_filename
 
+# checks number of command line arguments
+unless ARGV.length == 1
+  puts "Exécution impossible sans argments"
+  puts "usage : ruby email_parser.rb input_filename > output_filename\n"
+  exit
+end
+
 # get the input filename from the command line
 input_csv = ARGV[0]
 
