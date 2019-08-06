@@ -7,7 +7,7 @@ input_csv = ARGV[0]
 
 # loop through each record in the csv file
 CSV.foreach(input_csv) do |row1|
-	puts row1.inspect
+	puts row1[0]
 end
 
 
