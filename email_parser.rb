@@ -10,7 +10,6 @@ SCOPE_ID = 16
 # get the input filename from the command line
 input_csv = ARGV[0]
 
-
 def output_collab_list(input_csv)
 	collab_array = [['first_name', 'last_name', 'email', 'scope_id']]
 	# get each record in the csv file
@@ -31,7 +30,7 @@ def output_collab_list(input_csv)
 	collab_array
 end
 
-def to_csv(ca)
+def write_csv_output(ca)
 	# write collaborator list to csv file
 	CSV.open('collab_list.csv', 'w') do |csv|
 	  ca.each do |row|
@@ -49,6 +48,6 @@ if $0 == __FILE__
 	end
 
   # execute the scrpit
-  output_collab_list(input_csv)
+  write_csv_output(output_collab_list(input_csv))
   puts "Collaborator file completed"
 end
